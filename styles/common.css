@@ -1,0 +1,377 @@
+body {
+  /* background-color: rgba(91, 109, 87, 1); */
+  color: #0f0f0f;
+}
+.wrap {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+.wrap-circle {
+  width: 440px;
+  height: 440px;
+  position: absolute;
+  left: 50%;
+  top: -160px;
+  margin-left: -220px;
+  /* border-radius: 50%; */
+  background: #ffffff;
+  background: radial-gradient(
+    #ffffff,
+    rgba(255, 255, 255, 0.8),
+    rgba(237, 224, 184, 0.5),
+    rgba(237, 224, 184, 0.1)
+  );
+
+  opacity: 0.9;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+  gap: 90px;
+  position: fixed;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+header a {
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+header a:hover svg {
+  fill: #bb6100;
+}
+nav ul {
+  display: flex;
+  gap: 70px;
+}
+nav ul a {
+  font-family: "Gowun Batang", serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Lora", serif;
+  /* font-family: "Libre Baskerville", serif; */
+  font-optical-sizing: auto;
+  font-family: "Cinzel", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  transition: 0.25;
+}
+nav ul a:hover,
+nav ul a.active {
+  color: #bb6100;
+}
+.section {
+  height: 100vh;
+  overflow: hidden;
+}
+.section-1 {
+  background: #5b6d57;
+  background: linear-gradient(
+    0deg,
+    rgba(91, 109, 87, 1) 0%,
+    rgba(180, 178, 139, 1) 32%,
+    rgba(218, 208, 160, 1) 45%,
+    rgba(235, 221, 176, 1) 62%,
+    rgba(240, 232, 201, 1) 100%
+  );
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.canvas-stitch {
+  display: none;
+}
+.tea-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  margin-left: -50%;
+  opacity: 0.8;
+}
+.main-text {
+  font-family: "Gowun Batang", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 1.8em;
+  position: absolute;
+  left: 30%;
+  top: 35%;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 100px;
+}
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.section-2 {
+  height: auto;
+  /* background: #2d4d44;
+      background: #5b6d57;
+      background: linear-gradient(
+        179deg,
+        rgba(91, 109, 87, 1) 0%,
+        rgba(45, 77, 68, 1) 100%
+      ); */
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 180px 0;
+  position: relative;
+  z-index: 3;
+}
+.section-2-text {
+  font-family: "Gowun Batang", serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.8em;
+  color: #000000;
+  margin-bottom: 170px;
+}
+.section-2-text2 {
+  font-family: "Gowun Batang", serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.8em;
+  color: #000000;
+  margin-bottom: 60px;
+}
+.tea-list {
+  display: flex;
+  width: 960px;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  padding: 120px 60px;
+  padding-bottom: 200px;
+  background: #2d4d44;
+  background: #5b6d57;
+  background: linear-gradient(
+    179deg,
+    rgba(91, 109, 87, 0.6) 0%,
+    rgba(45, 77, 68, 0.8) 100%
+  );
+}
+.link-btn {
+  position: absolute;
+  bottom: 60px;
+  padding: 22px 60px;
+  border-radius: 30px;
+  background: #d48c0a;
+  font-family: "Gowun Batang", serif;
+  color: #f7efef;
+  font-size: 18px;
+}
+.tea-list img {
+  width: 190px;
+  transition: 0.2s;
+  margin-bottom: 20px;
+}
+.tea-list img:hover {
+  transform: scale(1.1);
+}
+.tea-item {
+  width: 190px;
+  color: #ffffff;
+  text-align: center;
+}
+.tea-item span {
+  display: inline-block;
+  margin: 10px;
+  font-family: "Gowun Batang", serif;
+}
+.section-3 {
+  background: #2d4d44;
+  position: relative;
+  z-index: 4;
+  padding: 180px;
+  height: auto;
+}
+.app-flex-box {
+  display: flex;
+  margin-bottom: 150px;
+}
+.app-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+/* .app-box-2 {
+  top: -50px;
+}
+.app-box-1 {
+  top: 50px;
+} */
+.app-box p {
+  font-family: "Gowun Batang", serif;
+
+  font-size: 20px;
+  line-height: 1.8em;
+  color: #ffffff;
+}
+/* .section-3 {
+  width: 300px;
+} */
+.section-2-2 {
+  width: 100%;
+  padding-top: 600px;
+  padding-bottom: 200px;
+  margin: 100px;
+  position: relative;
+}
+.section-3-text {
+  font-family: "Gowun Batang", serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.8em;
+  color: #bb6100;
+  margin-bottom: 160px;
+}
+.list2 {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.list-i-2 {
+  width: 400px;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px 0;
+  position: relative;
+}
+.list-i-2:nth-of-type(2n-1) {
+  top: 130px;
+}
+.list-i-2 .num {
+  font-size: 72px;
+  font-family: "Noto Serif", serif;
+  opacity: 0.08;
+
+  margin-left: 20px;
+}
+.list-i-2 p {
+  line-height: 1.5em;
+  font-size: 20px;
+  font-family: "Gowun Batang", serif;
+}
+.btn-box {
+  text-align: center;
+  position: absolute;
+  right: -30px;
+  bottom: 80px;
+}
+.btn-box a {
+  font-size: 18px;
+  font-weight: 400;
+  color: #bb6100;
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background: #090909;
+  position: relative;
+  z-index: 3;
+  white-space: nowrap;
+}
+.footer-contents {
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.8em;
+  font-size: 15px;
+}
+.footer-links {
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  display: flex;
+  gap: 25px;
+}
+.list-i {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 0;
+  font-family: "Gowun Batang", serif;
+}
+.list-i h2 {
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: bold;
+  color: #222222;
+  display: inline-block;
+}
+.list-i span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444444;
+  padding-left: 10px;
+  display: inline-block;
+}
+.sub-wrap {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+}
+.sub-section {
+  width: 1024px;
+  margin: 0 auto;
+  padding-top: 220px;
+  padding-bottom: 150px;
+}
+.sub-section h2 {
+  font-family: "Gowun Batang", serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.8em;
+  color: #000000;
+  margin-bottom: 60px;
+}
+.sub-section p {
+  font-family: "Gowun Batang", serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #000000;
+  margin-bottom: 40px;
+}
