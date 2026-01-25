@@ -76,13 +76,13 @@ nav ul a.active {
 
 @media (max-width: 700px) {
   header {
-    padding: 20px 30px;
+    padding: 20px 20px;
     gap: 40px;
     min-width: 0;
     overflow: hidden;
   }
   .logo {
-    width: 90px;
+    width: 80px;
   }
   header nav {
     flex: 1;
@@ -101,7 +101,7 @@ nav ul a.active {
 }
 @media (max-width: 500px) {
   nav ul {
-    gap: 40px;
+    gap: 30px;
   }
 }
 
@@ -249,6 +249,9 @@ nav ul a.active {
   max-width: 800px;
   position: relative;
 }
+.store-box img {
+  max-width: 100%;
+}
 
 .tea-list {
   display: flex;
@@ -295,6 +298,18 @@ nav ul a.active {
   margin: 10px;
   font-family: "Gowun Batang", serif;
 }
+.section-2-text3 {
+  font-family: "Gowun Batang", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 1.4em;
+  position: absolute;
+  right: 40%;
+  top: 40%;
+  white-space: nowrap;
+}
+
 @media (max-width: 700px) {
   .img-box {
     gap: 5%;
@@ -315,6 +330,10 @@ nav ul a.active {
   .section-2-text2 {
     font-size: 24px;
     padding-left: 20px;
+    margin-top: 100px;
+  }
+  .section-2-text3 {
+    font-size: 24px;
   }
 }
 .section-3 {
@@ -456,6 +475,12 @@ nav ul a.active {
   .list-i-2 {
     width: auto;
     top: 0 !important;
+  }
+  .list-i-2 .num {
+    margin: 0 10px;
+  }
+  .list-i-2 p {
+    font-size: 18px;
   }
 }
 .btn-box {
