@@ -1,11 +1,12 @@
 body {
   /* background-color: rgba(91, 109, 87, 1); */
   color: #0f0f0f;
+  overflow-x: hidden;
+  width: 100%;
 }
 .wrap {
   width: 100%;
   height: 100vh;
-
   position: relative;
 }
 .wrap-circle {
@@ -36,8 +37,11 @@ header {
   z-index: 10;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
 }
-
+.logo {
+  width: 120px;
+}
 header a {
   font-family: "Libre Baskerville", serif;
   font-optical-sizing: auto;
@@ -45,6 +49,7 @@ header a {
   font-style: normal;
   font-size: 48px;
 }
+
 header a:hover svg {
   fill: #bb6100;
 }
@@ -68,9 +73,43 @@ nav ul a:hover,
 nav ul a.active {
   color: #bb6100;
 }
+
+@media (max-width: 700px) {
+  header {
+    padding: 20px 30px;
+    gap: 40px;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .logo {
+    width: 90px;
+  }
+  header nav {
+    flex: 1;
+    min-width: 0;
+  }
+  nav ul {
+    width: 100%;
+
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  nav ul a {
+    font-size: 18px;
+    transition: 0.25;
+  }
+}
+@media (max-width: 500px) {
+  nav ul {
+    gap: 40px;
+  }
+}
+
 .section {
+  width: 100%;
   height: 100vh;
   overflow: hidden;
+  box-sizing: border-box;
 }
 .section-1 {
   background: #5b6d57;
@@ -105,12 +144,25 @@ nav ul a.active {
 .tea-bg {
   position: fixed;
   width: 100vw;
+  min-width: 1024px;
   height: 100vh;
   top: 0;
   left: 50%;
   margin-left: -50%;
   opacity: 0.8;
 }
+@media (max-width: 1024px) {
+  .tea-bg {
+    margin-left: -512px;
+  }
+}
+@media (max-width: 700px) {
+  .tea-bg {
+    min-width: 700px;
+    margin-left: -350px;
+  }
+}
+
 .main-text {
   font-family: "Gowun Batang", serif;
   font-weight: 500;
@@ -118,13 +170,22 @@ nav ul a.active {
   font-size: 32px;
   line-height: 1.8em;
   position: absolute;
-  left: 30%;
-  top: 35%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 3;
   text-align: center;
   color: #ffffff;
   padding-top: 100px;
 }
+@media (max-width: 700px) {
+  .main-text {
+    font-size: 20px;
+  }
+}
+
 .img-box {
   display: flex;
   justify-content: center;
@@ -132,7 +193,11 @@ nav ul a.active {
   gap: 60px;
   padding-top: 80px;
   padding-bottom: 120px;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
 .section-2 {
   height: auto;
   /* background: #2d4d44;
@@ -151,15 +216,27 @@ nav ul a.active {
   position: relative;
   z-index: 3;
 }
+@media (max-width: 768px) {
+  .section-2 {
+    padding: 50px 0px;
+  }
+}
 .section-2-text {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 20px;
   font-family: "Gowun Batang", serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.8em;
   color: #000000;
   margin-bottom: 170px;
+  box-sizing: border-box;
 }
 .section-2-text2 {
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 20px;
   font-family: "Gowun Batang", serif;
   font-weight: 500;
   font-size: 28px;
@@ -167,6 +244,12 @@ nav ul a.active {
   color: #000000;
   margin-bottom: 60px;
 }
+.store-box {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
 .tea-list {
   display: flex;
   width: 960px;
@@ -193,6 +276,7 @@ nav ul a.active {
   color: #f7efef;
   font-size: 18px;
 }
+
 .tea-list img {
   width: 190px;
   transition: 0.2s;
@@ -211,25 +295,95 @@ nav ul a.active {
   margin: 10px;
   font-family: "Gowun Batang", serif;
 }
+@media (max-width: 700px) {
+  .img-box {
+    gap: 5%;
+  }
+  .img-box img {
+    width: 25%;
+  }
+  .img-box img:first-of-type {
+    width: 28%;
+  }
+  .img-box img:last-of-type {
+    width: 26.5%;
+  }
+  .section-2-text {
+    font-size: 17px;
+    padding-left: 20px;
+  }
+  .section-2-text2 {
+    font-size: 24px;
+    padding-left: 20px;
+  }
+}
 .section-3 {
   background: #2d4d44;
   position: relative;
   z-index: 4;
-  padding: 180px;
+  padding: 180px 20px;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .app-flex-box {
+  width: 100%;
+  max-width: 1400px;
   display: flex;
   margin-bottom: 150px;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .app-box {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 30px;
   position: relative;
+}
+@media (max-width: 1024px) {
+  .app-flex-box {
+    display: block;
+  }
+  .app-box {
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  .app-box p {
+    margin-bottom: 30px;
+  }
+  .app-box img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .app-box {
+    width: 99%;
+  }
+}
+.app-down-button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  width: 240px;
+  height: 89px;
+}
+.app-down-button img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 600px) {
+  .app-down-button {
+    max-width: 40%;
+  }
 }
 /* .app-box-2 {
   top: -50px;
@@ -244,6 +398,8 @@ nav ul a.active {
   line-height: 1.8em;
   color: #ffffff;
 }
+.app-box img {
+}
 /* .section-3 {
   width: 300px;
 } */
@@ -255,6 +411,8 @@ nav ul a.active {
   position: relative;
 }
 .section-3-text {
+  width: 100%;
+  max-width: 1024px;
   font-family: "Gowun Batang", serif;
   font-weight: 500;
   font-size: 32px;
@@ -283,12 +441,22 @@ nav ul a.active {
   font-family: "Noto Serif", serif;
   opacity: 0.08;
 
-  margin-left: 20px;
+  margin: 0 20px;
 }
 .list-i-2 p {
   line-height: 1.5em;
   font-size: 20px;
   font-family: "Gowun Batang", serif;
+}
+
+@media (max-width: 1024px) {
+  .list2 {
+    flex-direction: column;
+  }
+  .list-i-2 {
+    width: auto;
+    top: 0 !important;
+  }
 }
 .btn-box {
   text-align: center;
@@ -300,6 +468,14 @@ nav ul a.active {
   font-size: 18px;
   font-weight: 400;
   color: #bb6100;
+}
+@media (max-width: 700px) {
+  .btn-box {
+    position: relative;
+    margin-top: 100px;
+    right: 0;
+    bottom: 0;
+  }
 }
 footer {
   width: 100%;
@@ -374,4 +550,11 @@ footer {
   line-height: 1.8em;
   color: #000000;
   margin-bottom: 40px;
+}
+.app-button-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
