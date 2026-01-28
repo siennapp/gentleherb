@@ -221,7 +221,7 @@ nav ul a.active {
   position: relative;
   z-index: 1;
   color: #ffffff;
-  padding-top: 15%;
+  padding-top: 15% !important;
 }
 .main-text h1 {
   font-weight: 600;
@@ -233,6 +233,7 @@ nav ul a.active {
 .main-text p {
   font-size: 20px;
   margin-bottom: 90px;
+  line-height: 1.35em;
 }
 .btn-main-link {
   background: #2c2525;
@@ -516,13 +517,15 @@ nav ul a.active {
   max-width: 90%;
   padding: 10px;
   font-size: 20px;
-  line-height: 1.8em;
+  line-height: 1.5em;
   font-weight: 300;
   color: #2c2525;
   background: #ffffff;
   text-align: center;
   border-radius: 26px;
   position: relative;
+  word-break: keep-all;
+  display: inline-block;
 }
 .app-box p:after {
   content: " ";
@@ -535,35 +538,30 @@ nav ul a.active {
   border-left: 10px solid transparent;
   border-bottom: none;
 }
+
 @media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
   .app-flex-box {
     display: block;
   }
   .app-box {
-    width: 49%;
+    width: 320px;
+    max-width: 48%;
     display: inline-block;
     text-align: center;
-    margin-bottom: 120px;
   }
-  .app-box p {
-    margin-bottom: 30px;
-  }
-  .app-box img {
+}
+@media (max-width: 480px) {
+  .app-box {
+    width: 100%;
     max-width: 100%;
   }
-}
-@media (max-width: 1024px) {
-  .app-box {
-    width: 99%;
+  .app-box img {
+    max-width: 80%;
   }
 }
-
-@media (max-width: 600px) {
-  .app-down-button {
-    max-width: 40%;
-  }
-}
-
 .section-5 {
   height: auto;
   padding: 170px 0;
@@ -603,21 +601,7 @@ nav ul a.active {
   padding: 18px 40px;
   display: inline-block;
 }
-@media (max-width: 1024px) {
-  .list2 {
-    flex-direction: column;
-  }
-  .list-i-2 {
-    width: auto;
-    top: 0 !important;
-  }
-  .list-i-2 .num {
-    margin: 0 10px;
-  }
-  .list-i-2 p {
-    font-size: 18px;
-  }
-}
+
 .btn-box {
   text-align: center;
   position: absolute;
@@ -720,7 +704,8 @@ footer {
   .tea-item p,
   .store-item p,
   .store-inner-list li,
-  .sec5-text p {
+  .sec5-text p,
+  .sec4-text p {
     font-size: 18px;
   }
   .store-inner-box {
@@ -736,6 +721,16 @@ footer {
   .store-item {
     padding: 20px 40px;
   }
+  .section-4 .container {
+    padding: 0 20px;
+  }
+  .app-box {
+    margin-top: 50px;
+  }
+  .app-box p {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
   footer {
     padding: 50px 60px;
   }
@@ -746,6 +741,9 @@ footer {
   }
   footer {
     padding: 50px 20px;
+  }
+  .main-text {
+    padding-top: 25% !important;
   }
   .main-text h1 {
     font-size: 36px;
@@ -762,8 +760,9 @@ footer {
   .tea-item p,
   .store-item p,
   .store-inner-list li,
-  .sec5-text p {
-    font-size: 16px;
+  .sec5-text p,
+  .sec4-text p {
+    font-size: 17px;
   }
   .tea-item-list {
     flex-direction: column;
@@ -796,9 +795,22 @@ footer {
   .store-inner-list {
     position: relative;
     background: rgba(255, 255, 255, 1);
+    padding: 40px 20px;
   }
   .btn-main-link,
   .btn-contact-link {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-text {
+    padding-top: 40% !important;
+  }
+  .main-text h1 {
+    font-size: 30px;
+  }
+  header nav ul li:last-child {
+    display: none;
   }
 }
