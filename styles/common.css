@@ -661,8 +661,11 @@ footer {
   position: relative;
 }
 .sub-section {
-  width: 1024px;
+  width: 1064px;
+  max-width: 100%;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 220px;
   padding-bottom: 150px;
 }
@@ -679,6 +682,7 @@ footer {
   line-height: 1.45em;
   color: #2c2525;
   margin-bottom: 40px;
+  word-break: keep-all;
 }
 
 @media (max-width: 1080px) {
@@ -689,7 +693,8 @@ footer {
   .sec3-text,
   .store-inner-list h3,
   .sec4-text h2,
-  .sec5-text h2 {
+  .sec5-text h2,
+  .sub-section h2 {
     font-size: 36px;
   }
 }
@@ -751,7 +756,8 @@ footer {
   .sec2-text h2,
   .sec3-text,
   .store-inner-list h3,
-  .sec4-text h2 {
+  .sec4-text h2,
+  .sub-section h2 {
     font-size: 28px;
   }
   .main-text p {
@@ -761,7 +767,8 @@ footer {
   .store-item p,
   .store-inner-list li,
   .sec5-text p,
-  .sec4-text p {
+  .sec4-text p,
+  .sub-section p {
     font-size: 17px;
   }
   .tea-item-list {
