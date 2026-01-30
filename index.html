@@ -7,6 +7,12 @@
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/common.css" />
     <title>gentleherb 젠틀허브</title>
@@ -17,18 +23,27 @@
          <nav>
           <ul>
             <li><a href="About.html">About</a></li>
-            <li><a href="#">Events</a></li>
+            <li><a href="javascript:void(0)" onclick="openPopup()">Events</a></li>
             <li><a href="https://smartstore.naver.com/gentleherb">Shop</a></li>
           </ul>
         </nav>
-        <a href="https://siennapp.github.io/gentleherb/"
+        <a href="/"
           ><img src="img/logo2.svg" class="logo" alt="젠틀허브"
         /></a>
        <a class="btn-header" href="mailto:gentleherb25@gmail.com">문의하기</a>
       </header>
       <section class="section section-1">
-        <img class="tea-bg" src="img/bbgg.gif" alt="배경" />
-        
+        <!-- <img class="tea-bg" src="img/bbgg.gif" alt="배경" /> -->
+        <div class="main-bg">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide slide1"><img class="main-img1" src="img/main-bg-1.jpg" alt="메인 배경1"/></div>
+              <div class="swiper-slide slide2"><img class="main-img2" src="img/main-bg-2.jpg" alt="메인 배경2"/></div>
+            </div>
+          </div>
+        </div>
         <div class="container main-text">
           <h1>하루를 돌보는 한 잔의 습관,<br/>
 젠틀허브</h1>
@@ -241,9 +256,44 @@
         </div>
       </footer>
     </div>
+    <!--popup-->
+    <div class="popup-container">
+      <div class="">
+        <p>현재 새로운 이벤트를 기획하고 있습니다.</p>
+        <button class="btn-popup" onclick="closePopup()">
+              닫기
+            </button>
+      </div>
+    </div>
   </body>
 
   <script>
     AOS.init();
+
+    //popup
+    const popup = document.querySelector('.popup-container');
+    function openPopup(){
+       popup.style.visibility = "visible"
+    };
+    function closePopup(){
+      popup.style.visibility = "hidden"
+    };
+
+    //main slide
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters\
+      loop: true,
+      effect:"fade",
+      autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+          },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+
+    });
   </script>
  </html>

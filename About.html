@@ -6,6 +6,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/common.css" />
     <title>gentleherb 젠틀허브</title>
@@ -16,13 +17,13 @@
         <nav>
           <ul>
             <li><a class="active" href="About.html">About</a></li>
-            <li><a href="#">Events</a></li>
+            <li>
+              <a href="javascript:void(0)" onclick="openPopup()">Events</a>
+            </li>
             <li><a href="https://smartstore.naver.com/gentleherb">Shop</a></li>
           </ul>
         </nav>
-        <a href="https://siennapp.github.io/gentleherb/"
-          ><img src="img/logo2.svg" class="logo" alt="젠틀허브"
-        /></a>
+        <a href="/"><img src="img/logo2.svg" class="logo" alt="젠틀허브" /></a>
         <a class="btn-header">문의하기</a>
       </header>
       <div>
@@ -92,5 +93,22 @@
         </div>
       </footer>
     </div>
+    <!--popup-->
+    <div class="popup-container">
+      <div class="">
+        <p>현재 새로운 이벤트를 기획하고 있습니다.</p>
+        <button class="btn-popup" onclick="closePopup()">닫기</button>
+      </div>
+    </div>
   </body>
+  <script>
+    //popup
+    const popup = document.querySelector(".popup-container");
+    function openPopup() {
+      popup.style.visibility = "visible";
+    }
+    function closePopup() {
+      popup.style.visibility = "hidden";
+    }
+  </script>
 </html>
