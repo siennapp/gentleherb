@@ -229,26 +229,50 @@ nav ul a.active {
   height: 100%;
   overflow: hidden;
 }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .swiper-slide img {
   max-width: 100%;
+  min-width: 100%;
 }
 
 @media (max-width: 1600px) {
   .swiper-slide {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .swiper-slide img {
-    max-width: 120%;
+    max-width: 150vh;
+    min-width: unset;
     height: 100%;
     width: unset;
   }
 }
 @media (max-width: 768px) {
+  .slide1 img {
+    position: relative;
+    left: -10%;
+  }
   .slide2 {
     justify-content: flex-start;
+  }
+  .slide2 img {
+    position: relative;
+    left: -10%;
+  }
+}
+@media (max-width: 500px) {
+  .slide1 img {
+    left: 0;
+  }
+
+  .slide2 img {
+    left: -40%;
   }
 }
 
